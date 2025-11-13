@@ -13,29 +13,29 @@ on:
 
 jobs:
   hackers-api:
-    if: ${{ fromJSON(inputs.manifest)['PROJECT_NAME-api']['cloudbeesdemo/PROJECT_NAME-api'].deploy }}
-    uses: TARGET_ORG/PROJECT_NAME-api/.cloudbees/workflows/deploy.yaml
+    if: ${{ fromJSON(inputs.manifest)['ld-nov-hackers-api']['cloudbeesdemo/ld-nov-hackers-api'].deploy }}
+    uses: cb-golden-demo-org/ld-nov-hackers-api/.cloudbees/workflows/deploy.yaml
     with:
-      artifactVersion: ${{ fromJSON(inputs.manifest)['PROJECT_NAME-api']['cloudbeesdemo/PROJECT_NAME-api'].version }}
-      artifact-id: ${{ fromJSON(inputs.manifest)['PROJECT_NAME-api']['cloudbeesdemo/PROJECT_NAME-api'].id }}
+      artifactVersion: ${{ fromJSON(inputs.manifest)['ld-nov-hackers-api']['cloudbeesdemo/ld-nov-hackers-api'].version }}
+      artifact-id: ${{ fromJSON(inputs.manifest)['ld-nov-hackers-api']['cloudbeesdemo/ld-nov-hackers-api'].id }}
       environment: ${{ inputs.environment }}
     secrets: inherit
     vars: inherit
   hackers-auth:
-    if: ${{ fromJSON(inputs.manifest)['PROJECT_NAME-auth']['cloudbeesdemo/PROJECT_NAME-auth'].deploy }}
-    uses: TARGET_ORG/PROJECT_NAME-auth/.cloudbees/workflows/deploy.yaml
+    if: ${{ fromJSON(inputs.manifest)['ld-nov-hackers-auth']['cloudbeesdemo/ld-nov-hackers-auth'].deploy }}
+    uses: cb-golden-demo-org/ld-nov-hackers-auth/.cloudbees/workflows/deploy.yaml
     with:
-      artifactVersion: ${{ fromJSON(inputs.manifest)['PROJECT_NAME-auth']['cloudbeesdemo/PROJECT_NAME-auth'].version }}
-      artifact-id: ${{ fromJSON(inputs.manifest)['PROJECT_NAME-auth']['cloudbeesdemo/PROJECT_NAME-auth'].id }}
+      artifactVersion: ${{ fromJSON(inputs.manifest)['ld-nov-hackers-auth']['cloudbeesdemo/ld-nov-hackers-auth'].version }}
+      artifact-id: ${{ fromJSON(inputs.manifest)['ld-nov-hackers-auth']['cloudbeesdemo/ld-nov-hackers-auth'].id }}
       environment: ${{ inputs.environment }}
     secrets: inherit
     vars: inherit
   hackers-web:
-    if: ${{ fromJSON(inputs.manifest)['PROJECT_NAME-web']['cloudbeesdemo/PROJECT_NAME-web'].deploy }}
-    uses: TARGET_ORG/PROJECT_NAME-web/.cloudbees/workflows/deploy.yaml
+    if: ${{ fromJSON(inputs.manifest)['ld-nov-hackers-web']['cloudbeesdemo/ld-nov-hackers-web'].deploy }}
+    uses: cb-golden-demo-org/ld-nov-hackers-web/.cloudbees/workflows/deploy.yaml
     with:
-      artifactVersion: ${{ fromJSON(inputs.manifest)['PROJECT_NAME-web']['cloudbeesdemo/PROJECT_NAME-web'].version }}
-      artifact-id: ${{ fromJSON(inputs.manifest)['PROJECT_NAME-web']['cloudbeesdemo/PROJECT_NAME-web'].id }}
+      artifactVersion: ${{ fromJSON(inputs.manifest)['ld-nov-hackers-web']['cloudbeesdemo/ld-nov-hackers-web'].version }}
+      artifact-id: ${{ fromJSON(inputs.manifest)['ld-nov-hackers-web']['cloudbeesdemo/ld-nov-hackers-web'].id }}
       environment: ${{ inputs.environment }}
     secrets: inherit
     vars: inherit
