@@ -337,7 +337,7 @@ jobs:
           application-name: ld-nov-hackers-app
           environment-name: ld-nov-hackers-qa
           flag-name: default.score
-          use-org-as-app: true
+          use-org-as-app: false
           flag-config: |
             enabled: true
             defaultValue: true
@@ -671,7 +671,7 @@ jobs:
           application-name: ld-nov-hackers-app
           environment-name: ld-nov-hackers-staging
           flag-name: default.score
-          use-org-as-app: true
+          use-org-as-app: false
           flag-config: |
             enabled: true
             defaultValue: true
@@ -1209,7 +1209,7 @@ jobs:
           application-name: ld-nov-hackers-app
           environment-name: ld-nov-hackers-prod
           flag-name: default.score
-          use-org-as-app: true
+          use-org-as-app: false
           flag-config: |
             enabled: true
             defaultValue:
